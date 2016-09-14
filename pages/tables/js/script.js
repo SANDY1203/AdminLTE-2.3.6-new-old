@@ -122,6 +122,7 @@ $(document).ready(function () {
 
 
 //company section
+<<<<<<< HEAD
 function addRecordCompany() {
     // get values
 	var company_id = $("#company_id").val();
@@ -627,6 +628,8 @@ $(document).ready(function () {
     // READ recods on page load
     readRecordsProject(); // calling function
 });
+=======
+>>>>>>> origin/combine
 
 
 

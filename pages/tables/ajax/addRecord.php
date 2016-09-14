@@ -1,5 +1,8 @@
 <?php
-	if(isset($_POST['id']) && isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['role']))
+// include Database connection file 
+		include("db_connection.php");
+
+	if(isset($_POST))
 	{
 		// include Database connection file 
 		include("db_connection.php");
@@ -16,6 +19,6 @@
 		if (!$result = mysql_query($query)) {
 	        exit(mysql_error());
 	    }
-	    echo "1 Record Added!";
+	    
 	}
 ?>
