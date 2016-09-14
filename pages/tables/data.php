@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,26 +19,6 @@
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
-  
-  <!-- Jquery JS file -->
-<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-
-<!-- Bootstrap JS file -->
-<script type="text/javascript" src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
-
-<!-- Custom JS file -->
-<script type="text/javascript" src="js/script.js"></script>
-
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-75591362-1', 'auto');
-    ga('send', 'pageview');
-
-</script>
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -534,19 +514,15 @@
     <section class="content">
       <div class="row">
         <div class="col-xs-12">
-          <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">Hover Data Table</h3>
-            </div>
-            <!-- /.box-header -->
-            <div class="container">
+          <!-- Content Section -->
+<div class="container">
     <div class="row">
         <div class="col-md-12">
             <h1>User data table</h1>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-10">
             <div class="pull-right">
                 <button class="btn btn-success" data-toggle="modal" data-target="#add_new_record_modal">Add New Record</button>
             </div>
@@ -654,9 +630,27 @@
         </div>
     </div>
 </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
+<!-- // Modal -->
+
+<!-- Jquery JS file -->
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+
+<!-- Bootstrap JS file -->
+<script type="text/javascript" src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+
+<!-- Custom JS file -->
+<script type="text/javascript" src="js/script.js"></script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-75591362-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
 
           <div class="box">
             <div class="box-header">
