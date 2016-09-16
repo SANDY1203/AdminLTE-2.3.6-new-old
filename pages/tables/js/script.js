@@ -760,7 +760,6 @@ $(document).ready(function () {
 
 
 
-
 //PROSERV_PROJECT section
 
 function addRecordProserv_Project() {
@@ -1152,7 +1151,11 @@ function addRecordTeam_Members() {
 // READ records
 function readRecordsTeam_Members() {
     $.get("ajax/readRecordsTeam_Members.php", {}, function (data, status) {
+<<<<<<< HEAD
         $(".records_content9").html(data);
+=======
+        $(".records_content7").html(data);
+>>>>>>> origin/combine
     });
 }
 
@@ -1415,7 +1418,6 @@ $(document).ready(function () {
     // READ recods on page load
     readRecordsQuotation(); // calling function
 });
-
 
 
 

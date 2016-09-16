@@ -1128,6 +1128,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
+<<<<<<< HEAD
             <h1>User data table</h1>
         </div>
     </div>
@@ -1246,6 +1247,9 @@
     <div class="row">
         <div class="col-md-12">
             <h1>User data table</h1>
+=======
+            <h1>PROJECT TABLE DATA</h1>
+>>>>>>> origin/combine
         </div>
     </div>
     <div class="row">
@@ -1474,7 +1478,252 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 <!-- // Modal -->
+=======
+<!-- Content Section -->
+
+<!-- Content Section -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>TEAM-MEMBER TABLE DATA</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <div class="pull-right">
+                <button class="btn btn-success" data-toggle="modal" data-target="#add_new_record_modal7">Add New Record</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Records:</h3>
+
+            <div class="records_content7"></div>
+        </div>
+    </div>
+</div>
+<!-- /Content Section -->
+
+
+<!-- Bootstrap Modals -->
+<!-- Modal - Add New Record/User -->
+<div class="modal fade" id="add_new_record_modal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Add New Record</h4>
+            </div>
+            <div class="modal-body">
+			
+			
+			
+
+                <div class="form-group">
+                    <label for="team_m_id">ID</label>
+                    <input type="text" id="team_m_id" placeholder="ID" class="form-control"/>
+                </div>
+				
+				<div class="form-group">
+                    <label for="team_m_first_name">team_m_first_name</label>
+                    <input type="text" id="team_m_first_name" placeholder="team_m_first_name" class="form-control"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="team_m_last_name">team_m_last_name</label>
+                    <input type="text" id="team_m_last_name" placeholder="team_m_last_name" class="form-control"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="team_m_position">team_m_position</label>
+                    <input type="text" id="team_m_position" placeholder="team_m_position" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="team_m_employement_status">team_m_employement_status</label>
+                    <input type="text" id="team_m_employement_status" placeholder="team_m_employement_status" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="team_id">team_id</label>
+                    <input type="text" id="team_id" placeholder="team_id" class="form-control"/>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="addRecordTeam_Members()">Add Record</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // Modal -->
+
+<!-- Modal - Update User details -->
+<div class="modal fade" id="update_team_members_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Update</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label for="team_m_first_name">team_m_first_name</label>
+                    <input type="text" id="update_team_m_first_name" placeholder="team_m_first_name" class="form-control"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="team_m_last_name">team_m_last_name</label>
+                    <input type="text" id="update_team_m_last_name" placeholder="team_m_last_name" class="form-control"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="team_m_position">team_m_position</label>
+                    <input type="text" id="update_team_m_position" placeholder="team_m_position" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="team_m_employement_status">team_m_employement_status</label>
+                    <input type="text" id="update_team_m_employement_status" placeholder="team_m_employement_status" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="team_id">team_id</label>
+                    <input type="text" id="update_team_id" placeholder="team_id" class="form-control"/>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="UpdateTeam_MembersDetails()" >Save Changes</button>
+                <input type="hidden" id="hidden_team_members_id">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Content Section -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>PROSERV TABLE DATA</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <div class="pull-right">
+                <button class="btn btn-success" data-toggle="modal" data-target="#add_new_record_modal9">Add New Record</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Records:</h3>
+
+            <div class="records_content9"></div>
+        </div>
+    </div>
+</div>
+<!-- /Content Section -->
+
+
+<!-- Bootstrap Modals -->
+<!-- Modal - Add New Record/User -->
+<div class="modal fade" id="add_new_record_modal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Add New Record</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label for="id">ID</label>
+                    <input type="text" id="id" placeholder="ID" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="product_name">product_name</label>
+                    <input type="text" id="product_name" placeholder="product_name" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="product_description">product_description</label>
+                    <input type="text" id="product_description" placeholder="product_description" class="form-control"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="product_start_price">product_start_price</label>
+                    <input type="text" id="product_start_price" placeholder="product_start_price" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="product_end_price">product_end_price</label>
+                    <input type="text" id="product_end_price" placeholder="product_end_price" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="category">category</label>
+                    <input type="text" id="category" placeholder="category" class="form-control"/>
+                </div>
+				
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="addRecordProserv()">Add Record</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // Modal -->
+
+<!-- Modal - Update User details -->
+<div class="modal fade" id="update_proserv_modal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Update</h4>
+            </div>
+            <div class="modal-body">
+
+                     
+				<div class="form-group">
+                    <label for="product_name">product_name</label>
+                    <input type="text" id="update_product_name" placeholder="product_name" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="ans_1">product_description</label>
+                    <input type="text" id="update_product_description" placeholder="product_description" class="form-control"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="ans_2">product_start_price</label>
+                    <input type="text" id="update_product_start_price" placeholder="product_start_price" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="ans_3">product_end_price</label>
+                    <input type="text" id="update_product_end_price" placeholder="product_end_price" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="ans_4">category</label>
+                    <input type="text" id="update_category" placeholder="category" class="form-control"/>
+                </div>
+				
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="UpdateProservDetails()" >Save Changes</button>
+                <input type="hidden" id="hidden_id">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+>>>>>>> origin/combine
 <!-- Content Section -->
 <div class="container">
     <div class="row">
@@ -1942,6 +2191,7 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 <!-- // Modal -->
 <!-- Content Section -->
 <div class="container">
@@ -2060,6 +2310,9 @@
     </div>
 </div>
 <!-- // Modal -->
+=======
+<!-- Content Section -->
+>>>>>>> origin/combine
 
 
 
