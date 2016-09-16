@@ -256,10 +256,10 @@ function addRecordContact() {
         contact_company_allo: contact_company_allo
     }, function (data, status) {
         // close the popup
-        $("#add_new_record_modal4").modal("hide");
+        $("#add_new_record_modal1").modal("hide");
 
         // read records again
-        readRecordsContact();
+        readRecords();
 
         // clear fields from the popup
         $("#id").val("");
@@ -276,7 +276,7 @@ function addRecordContact() {
 // READ records
 function readRecordsContact() {
     $.get("ajax/readRecordsContact.php", {}, function (data, status) {
-        $(".records_content4").html(data);
+        $(".records_content2").html(data);
     });
 }
 
@@ -315,13 +315,13 @@ function GetContactDetails(id) {
         }
     );
     // Open modal popup
-    $("#update_contact_modal").modal("show");
+    $("#update_user_modal").modal("show");
 }
 
 function UpdateContactDetails() {
     // get values
     var contact_name = $("#update_contact_name").val();
-    var contact_position = $("#update_contact_position").val();
+    var contact_position = $("#update_contact_name").val();
     var contact_number_one = $("#update_contact_number_one").val();
     var contact_number_two = $("#update_contact_number_two").val();
 	var contact_email_one = $("#update_contact_email_one").val();
@@ -344,7 +344,7 @@ function UpdateContactDetails() {
         },
         function (data, status) {
             // hide modal popup
-            $("#update_contact_modal").modal("hide");
+            $("#update_user_modal").modal("hide");
             // reload contact by using readRecords();
             readRecordsContact();
         }
@@ -514,7 +514,7 @@ function addRecordProject() {
 	var project_price = $("#project_price").val();
 	var project_team = $("#project_team").val();
 	var project_status = $("#project_status").val();
-	var user_id = $("#user_id3").val();
+	var user_id = $("#user_id").val();
 	
 
     // Add record
@@ -526,14 +526,14 @@ function addRecordProject() {
         project_price: project_price,
         project_team: project_team,
 		project_status: project_status,
-        user_id: user_id
+        user_id: user_id,
 		
     }, function (data, status) {
         // close the popup
-        $("#add_new_record_modal5").modal("hide");
+        $("#add_new_record_modal").modal("hide");
 
         // read records again
-        readRecordsProject();
+        readRecords();
 
         // clear fields from the popup
         $("#id").val("");
@@ -543,14 +543,14 @@ function addRecordProject() {
         $("#project_price").val("");
         $("#project_team").val("");
 		$("#project_status").val("");
-     	$("#user_id3").val("");
+     	$("#user_id").val("");
     });
 }
 
 // READ records
 function readRecordsProject() {
     $.get("ajax/readRecordsProject.php", {}, function (data, status) {
-        $(".records_content5").html(data);
+        $(".records_content4").html(data);
     });
 }
 
@@ -563,7 +563,7 @@ function DeleteProject(id) {
             },
             function (data, status) {
                 // reload Contact by using readRecords();
-                readRecordsProject();
+                readRecordsFeedback();
             }
         );
     }
@@ -585,11 +585,11 @@ function GetProjectDetails(id) {
             $("#update_project_price").val(user.project_price);
             $("#update_project_team").val(user.project_team);
 			$("#update_project_status").val(user.project_status);
-            $("#update_user_id2").val(user.user_id);
+            $("#update_user_id").val(user.user_id);
         }
     );
     // Open modal popup
-    $("#update_project_modal").modal("show");
+    $("#update_user_modal").modal("show");
 }
 
 function UpdateProjectDetails() {
@@ -600,7 +600,7 @@ function UpdateProjectDetails() {
     var project_price = $("#update_project_price").val();
 	var project_team = $("#update_project_team").val();
     var project_status = $("#update_project_status").val();
-    var user_id = $("#update_user_id2").val();
+    var user_id = $("#update_user_id").val();
 
 
     // get hidden field value
@@ -619,7 +619,7 @@ function UpdateProjectDetails() {
         },
         function (data, status) {
             // hide modal popup
-            $("#update_project_modal").modal("hide");
+            $("#update_user_modal").modal("hide");
             // reload contact by using readRecords();
             readRecordsProject();
         }
@@ -766,12 +766,12 @@ $(document).ready(function () {
 function addRecordProserv_Project() {
     // get values
 	var id = $("#id").val();
-    var proserv_id = $("#proserv_id1").val();
-    var project_contractor_id = $("#project_contractor_id1").val();
-    var project_price = $("#project_price1").val();
-	var project_team = $("#project_team1").val();
-	var project_status = $("#project_status1").val();
-	var category_proserv_project = $("#category_proserv_project1").val();
+    var proserv_id = $("#proserv_id").val();
+    var project_contractor_id = $("#project_contractor_id").val();
+    var project_price = $("#project_price").val();
+	var project_team = $("#project_team").val();
+	var project_status = $("#project_status").val();
+	var category_proserv_project = $("#category_proserv_project").val();
 	
 
     // Add record
@@ -786,19 +786,19 @@ function addRecordProserv_Project() {
 
     }, function (data, status) {
         // close the popup
-        $("#add_new_record_modal6").modal("hide");
+        $("#add_new_record_modal").modal("hide");
 
         // read records again
-        readRecordsProserv_Project();
+        readRecords();
 
         // clear fields from the popup
         $("#id").val("");
-        $("#proserv_id1").val("");
-        $("#project_contractor_id1").val("");
-        $("#project_price1").val("");
-        $("#project_team1").val("");
-        $("#project_status1").val("");
-		$("#category_proserv_project1").val("");
+        $("#proserv_id").val("");
+        $("#project_contractor_id").val("");
+        $("#project_price").val("");
+        $("#project_team").val("");
+        $("#project_status").val("");
+		$("#category_proserv_project").val("");
 
     });
 }
@@ -837,24 +837,24 @@ function GetProserv_ProjectDetails(id) {
             // Assing existing values to the modal popup fields
             $("#update_proserv_id").val(user.proserv_id);
             $("#update_project_contractor_id").val(user.project_contractor_id);
-            $("#update_project_price1").val(user.project_price);
-            $("#update_project_team1").val(user.project_team);
-            $("#update_project_status1").val(user.project_status);
+            $("#update_project_price").val(user.project_price);
+            $("#update_project_team").val(user.project_team);
+            $("#update_project_status").val(user.project_status);
 			$("#update_category_proserv_project").val(user.category_proserv_project);
 			
         }
     );
     // Open modal popup
-    $("#update_proserv_project_modal").modal("show");
+    $("#update_user_modal").modal("show");
 }
 
 function UpdateProserv_ProjectDetails() {
     // get values
     var proserv_id = $("#update_proserv_id").val();
     var project_contractor_id = $("#update_project_contractor_id").val();
-    var project_price = $("#update_project_price1").val();
-    var project_team = $("#update_project_team1").val();
-	var project_status = $("#update_project_status1").val();
+    var project_price = $("#update_project_price").val();
+    var project_team = $("#update_project_team").val();
+	var project_status = $("#update_project_status").val();
 	var category_proserv_project = $("#update_category_proserv_project").val();
 
 
@@ -873,7 +873,7 @@ function UpdateProserv_ProjectDetails() {
         },
         function (data, status) {
             // hide modal popup
-            $("#update_proserv_project_modal").modal("hide");
+            $("#update_user_modal").modal("hide");
             // reload contact by using readRecords();
             readRecordsProserv_Project();
         }
@@ -895,25 +895,25 @@ $(document).ready(function () {
 
 function addRecordQuestions() {
     // get values
-	var id = $("#id").val();
+	var q_id = $("#q_id").val();
     var question = $("#question").val();
     
 	
 
     // Add record
     $.post("ajax/addRecordQuestions.php", {
-		id: id,
+		q_id: q_id,
         question: question
 
     }, function (data, status) {
         // close the popup
-        $("#add_new_record_modal3").modal("hide");
+        $("#add_new_record_modal").modal("hide");
 
         // read records again
-        readRecordsQuestions();
+        readRecords();
 
         // clear fields from the popup
-        $("#id").val("");
+        $("#q_id").val("");
         $("#question").val("");
        
 
@@ -923,7 +923,7 @@ function addRecordQuestions() {
 // READ records
 function readRecordsQuestions() {
     $.get("ajax/readRecordsQuestions.php", {}, function (data, status) {
-        $(".records_content3").html(data);
+        $(".records_content7").html(data);
     });
 }
 
@@ -944,7 +944,7 @@ function DeleteQuestions(id) {
 
 function GetQuestionsDetails(id) {
     // Add User ID to the hidden field for furture usage
-    $("#hidden_question_id").val(id);
+    $("#hidden_questions_id").val(id);
     $.post("ajax/readQuestionsDetails.php", {
             id: id
         },
@@ -952,18 +952,19 @@ function GetQuestionsDetails(id) {
             // PARSE json data
             var user = JSON.parse(data);
             // Assing existing values to the modal popup fields
+            $("#update_q_id").val(user.q_id);
             $("#update_question").val(user.question);
            
 			
         }
     );
     // Open modal popup
-    $("#update_question_modal").modal("show");
+    $("#update_user_modal").modal("show");
 }
 
 function UpdateQuestionsDetails() {
     // get values
-    
+    var q_id = $("#update_q_id").val();
     var question = $("#update_question").val();
     
 
@@ -972,12 +973,12 @@ function UpdateQuestionsDetails() {
 
     // Update the details by requesting to the server using ajax
     $.post("ajax/updateQuestionsDetails.php", {
-           id: id,
+           q_id: q_id,
         question: question
         },
         function (data, status) {
             // hide modal popup
-            $("#update_question_modal").modal("hide");
+            $("#update_user_modal").modal("hide");
             // reload contact by using readRecords();
             readRecordsQuestions();
         }
@@ -1035,7 +1036,7 @@ function readRecordsTeam() {
 }
 
 
-function DeleteTeam(team_id) {
+function DeleteTeam(id) {
     var conf = confirm("Are you sure, do you really want to delete Team?");
     if (conf == true) {
         $.post("ajax/deleteTeam.php", {
@@ -1049,9 +1050,9 @@ function DeleteTeam(team_id) {
     }
 }
 
-function GetTeamDetails(team_id) {
+function GetTeamDetails(id) {
     // Add User ID to the hidden field for furture usage
-    $("#hidden_team_id").val(team_id);
+    $("#hidden_team_id").val(id);
     $.post("ajax/readTeamDetails.php", {
             team_id: team_id
         },
@@ -1059,7 +1060,7 @@ function GetTeamDetails(team_id) {
             // PARSE json data
             var user = JSON.parse(data);
             // Assing existing values to the modal popup fields
-            
+            $("#update_team_id").val(user.team_id);
             $("#update_team_name").val(user.team_name);
             $("#update_team_lead").val(user.team_lead);
            
@@ -1072,13 +1073,13 @@ function GetTeamDetails(team_id) {
 
 function UpdateTeamDetails() {
     // get values
-    
+    var team_id = $("#update_team_id").val();
     var team_name = $("#update_team_name").val();
     var team_lead = $("#update_team_lead").val();
     
 
     // get hidden field value
-    var team_id = $("#hidden_team_id").val();
+    var id = $("#hidden_team_id").val();
 
     // Update the details by requesting to the server using ajax
     $.post("ajax/updateTeamDetails.php", {
@@ -1099,7 +1100,6 @@ $(document).ready(function () {
     // READ recods on page load
     readRecordsTeam(); // calling function
 });
-
 
 
 
@@ -1132,10 +1132,10 @@ function addRecordTeam_Members() {
 
     }, function (data, status) {
         // close the popup
-        $("#add_new_record_modal7").modal("hide");
+        $("#add_new_record_modal").modal("hide");
 
         // read records again
-        readRecordsTeam_Members();
+        readRecords();
 
         // clear fields from the popup
         $("#team_m_id").val("");
@@ -1152,16 +1152,12 @@ function addRecordTeam_Members() {
 // READ records
 function readRecordsTeam_Members() {
     $.get("ajax/readRecordsTeam_Members.php", {}, function (data, status) {
-<<<<<<< HEAD
-        $(".records_content99").html(data);
-=======
-        $(".records_content7").html(data);
->>>>>>> origin/combine
+        $(".records_content9").html(data);
     });
 }
 
 
-function DeleteTeam_Members(team_m_id) {
+function DeleteTeam_Members(id) {
     var conf = confirm("Are you sure, do you really want to delete Team Members?");
     if (conf == true) {
         $.post("ajax/deleteTeam_Members.php", {
@@ -1175,9 +1171,9 @@ function DeleteTeam_Members(team_m_id) {
     }
 }
 
-function GetTeam_MembersDetails(team_m_id) {
+function GetTeam_MembersDetails(id) {
     // Add User ID to the hidden field for furture usage
-    $("#hidden_team_members_id").val(team_m_id);
+    $("#hidden_team_m_id").val(id);
     $.post("ajax/readTeam_MembersDetails.php", {
             team_m_id: team_m_id
         },
@@ -1196,15 +1192,12 @@ function GetTeam_MembersDetails(team_m_id) {
         }
     );
     // Open modal popup
-    $("#update_team_members_modal").modal("show");
+    $("#update_user_modal").modal("show");
 }
-
-
 
 function UpdateTeam_MembersDetails() {
     // get values
-    
-
+    var team_m_id = $("#update_team_m_id").val();
     var team_m_first_name = $("#update_team_m_first_name").val();
     var team_m_last_name = $("#update_team_m_last_name").val();
     var team_m_position = $("#update_team_m_position").val();
@@ -1213,7 +1206,7 @@ function UpdateTeam_MembersDetails() {
     
 
     // get hidden field value
-    var team_m_id = $("#hidden_team_members_id").val();
+    var id = $("#hidden_team_members_id").val();
 
     // Update the details by requesting to the server using ajax
     $.post("ajax/updateTeam_MembersDetails.php", {
@@ -1226,7 +1219,7 @@ function UpdateTeam_MembersDetails() {
         },
         function (data, status) {
             // hide modal popup
-            $("#update_team_members_modal").modal("hide");
+            $("#update_user_modal").modal("hide");
             // reload contact by using readRecords();
             readRecordsTeam_Members();
         }
@@ -1248,7 +1241,7 @@ $(document).ready(function () {
 
 function addRecordQuotation() {
     // get values
-	var id = $("#id").val();
+	var quotation_id = $("#quotation_id").val();
     var lead = $("#lead").val();
     var opportunity = $("#opportunity").val();
     var proposal = $("#proposal").val();
@@ -1262,13 +1255,13 @@ function addRecordQuotation() {
 	var invoice = $("#invoice").val();
 	var delivery = $("#delivery").val();
 	var cancelled = $("#cancelled").val();
-	var delay = $("#delay").val();
+	var delayed = $("#delayed").val();
 	var completed = $("#completed").val();
-	var user_id = $("#user_id5").val();
+	var user_id = $("#user_id").val();
 
     // Add record
     $.post("ajax/addRecordQuotation.php", {
-		id: id,
+		quotation_id: quotation_id,
         lead: lead,
         opportunity: opportunity,
         proposal: proposal,
@@ -1282,18 +1275,18 @@ function addRecordQuotation() {
 		invoice: invoice,
 		delivery: delivery,
 		cancelled: cancelled,
-		delay: delay,
+		delayed: delayed,
 		completed: completed,
 		user_id: user_id
     }, function (data, status) {
         // close the popup
-        $("#add_new_record_modal23").modal("hide");
+        $("#add_new_record_modal").modal("hide");
 
         // read records again
-        readRecordsQuotation();
+        readRecords();
 
         // clear fields from the popup
-        $("#id").val("");
+        $("#quotation_id").val("");
         $("#lead").val("");
         $("#opportunity").val("");
         $("#proposal").val("");
@@ -1307,16 +1300,16 @@ function addRecordQuotation() {
 		$("#invoice").val("");
 		$("#delivery").val("");
 		$("#cancelled").val("");
-		$("#delay").val("");
+		$("#delayed").val("");
 		$("#completed").val("");
-		$("#user_id5").val("");
+		$("#user_id").val("");
     });
 }
 
 // READ records
 function readRecordsQuotation() {
     $.get("ajax/readRecordsQuotation.php", {}, function (data, status) {
-        $(".records_content200").html(data);
+        $(".records_content10").html(data);
     });
 }
 
@@ -1325,7 +1318,7 @@ function DeleteQuotation(id) {
     var conf = confirm("Are you sure, do you really want to delete Quotation?");
     if (conf == true) {
         $.post("ajax/deleteQuotation.php", {
-                id: id
+                quotation_id: quotation_id
             },
             function (data, status) {
                 // reload Contact by using readRecords();
@@ -1339,7 +1332,7 @@ function GetQuotationDetails(id) {
     // Add User ID to the hidden field for furture usage
     $("#hidden_quotation_id").val(id);
     $.post("ajax/readQuotationDetails.php", {
-            id: id
+            quotation_id: quotation_id
         },
         function (data, status) {
             // PARSE json data
@@ -1358,13 +1351,13 @@ function GetQuotationDetails(id) {
 			$("#update_invoice").val(user.invoice);
 			$("#update_delivery").val(user.delivery);
 			$("#update_cancelled").val(user.cancelled);
-			$("#update_delay").val(user.delay);
+			$("#update_delayed").val(user.delayed);
 			$("#update_completed").val(user.completed);
-			$("#update_user_id5").val(user.user_id);
+			$("#update_user_id").val(user.user_id);
         }
     );
     // Open modal popup
-    $("#update_quotation_modal").modal("show");
+    $("#update_user_modal").modal("show");
 }
 
 function UpdateQuotationDetails() {
@@ -1382,16 +1375,16 @@ function UpdateQuotationDetails() {
 	var invoice = $("#update_invoice").val();
 	var delivery = $("#update_delivery").val();
 	var cancelled = $("#update_cancelled").val();
-	var delay = $("#update_delay").val();
+	var delayed = $("#update_delayed").val();
 	var completed = $("#update_completed").val();
-	var user_id = $("#update_user_id5").val();
+	var user_id = $("#update_user_id").val();
 
     // get hidden field value
     var id = $("#hidden_quotation_id").val();
 
     // Update the details by requesting to the server using ajax
     $.post("ajax/updateQuotationDetails.php", {
-            id: id,
+            quotation_id: quotation_id,
         lead: lead,
         opportunity: opportunity,
         proposal: proposal,
@@ -1405,13 +1398,13 @@ function UpdateQuotationDetails() {
 		invoice: invoice,
 		delivery: delivery,
 		cancelled: cancelled,
-		delay: delay,
+		delayed: delayed,
 		completed: completed,
 		user_id: user_id
         },
         function (data, status) {
             // hide modal popup
-            $("#update_quotation_modal").modal("hide");
+            $("#update_user_modal").modal("hide");
             // reload contact by using readRecords();
             readRecordsQuotation();
         }
