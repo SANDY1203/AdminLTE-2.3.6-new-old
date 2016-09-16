@@ -1137,6 +1137,125 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
+            <h1>PROSERV TABLE DATA</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <div class="pull-right">
+                <button class="btn btn-success" data-toggle="modal" data-target="#add_new_record_modal9">Add New Record</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Records:</h3>
+
+            <div class="records_content9"></div>
+        </div>
+    </div>
+</div>
+<!-- /Content Section -->
+
+
+<!-- Bootstrap Modals -->
+<!-- Modal - Add New Record/User -->
+<div class="modal fade" id="add_new_record_modal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Add New Record</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label for="id">ID</label>
+                    <input type="text" id="id" placeholder="ID" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="product_name">product_name</label>
+                    <input type="text" id="product_name" placeholder="product_name" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="product_description">product_description</label>
+                    <input type="text" id="product_description" placeholder="product_description" class="form-control"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="product_start_price">product_start_price</label>
+                    <input type="text" id="product_start_price" placeholder="product_start_price" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="product_end_price">product_end_price</label>
+                    <input type="text" id="product_end_price" placeholder="product_end_price" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="category">category</label>
+                    <input type="text" id="category" placeholder="category" class="form-control"/>
+                </div>
+				
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="addRecordProserv()">Add Record</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // Modal -->
+
+<!-- Modal - Update User details -->
+<div class="modal fade" id="update_proserv_modal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Update</h4>
+            </div>
+            <div class="modal-body">
+
+                     
+				<div class="form-group">
+                    <label for="product_name">product_name</label>
+                    <input type="text" id="update_product_name" placeholder="product_name" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="ans_1">product_description</label>
+                    <input type="text" id="update_product_description" placeholder="product_description" class="form-control"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="ans_2">product_start_price</label>
+                    <input type="text" id="update_product_start_price" placeholder="product_start_price" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="ans_3">product_end_price</label>
+                    <input type="text" id="update_product_end_price" placeholder="product_end_price" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="ans_4">category</label>
+                    <input type="text" id="update_category" placeholder="category" class="form-control"/>
+                </div>
+				
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="UpdateProservDetails()" >Save Changes</button>
+                <input type="hidden" id="hidden_id">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Content Section -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
             <h1>PROJECT TABLE DATA</h1>
         </div>
     </div>
@@ -1392,6 +1511,308 @@
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                 <button type="button" class="btn btn-primary" onclick="UpdateProserv_ProjectDetails()" >Save Changes</button>
                 <input type="hidden" id="hidden_proserv_project_id">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Content Section -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>TEAM TABLE DATA</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <div class="pull-right">
+                <button class="btn btn-success" data-toggle="modal" data-target="#add_new_record_modal10">Add New Record</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Records:</h3>
+
+            <div class="records_content10"></div>
+        </div>
+    </div>
+</div>
+<!-- /Content Section -->
+
+
+<!-- Bootstrap Modals -->
+<!-- Modal - Add New Record/User -->
+<div class="modal fade" id="add_new_record_modal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Add New Record</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label for="team_id">Team ID</label>
+                    <input type="text" id="team_id" placeholder="team_id" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="team_name">team_name</label>
+                    <input type="text" id="team_name" placeholder="team_name" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="team_lead">team_lead</label>
+                    <input type="text" id="team_lead" placeholder="team_lead" class="form-control"/>
+                </div>
+
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="addRecordTeam()">Add Record</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // Modal -->
+
+<!-- Modal - Update User details -->
+<div class="modal fade" id="update_team_modal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Update</h4>
+            </div>
+            <div class="modal-body">
+
+                     
+				<div class="form-group">
+                    <label for="team_name">team_name</label>
+                    <input type="text" id="update_team_name" placeholder="team_name" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="team_lead">team_lead</label>
+                    <input type="text" id="update_team_lead" placeholder="team_lead" class="form-control"/>
+                </div>
+
+               
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="UpdateTeamDetails()" >Save Changes</button>
+                <input type="hidden" id="hidden_team_id">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Content Section -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Quotation TABLE DATA</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <div class="pull-right">
+                <button class="btn btn-success" data-toggle="modal" data-target="#add_new_record_modal23">Add New Record</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Records:</h3>
+
+            <div class="records_content200"></div>
+        </div>
+    </div>
+</div>
+<!-- /Content Section -->
+
+
+<!-- Bootstrap Modals -->
+<!-- Modal - Add New Record/User -->
+<div class="modal fade" id="add_new_record_modal23" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Add New Record</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label for="id">ID</label>
+                    <input type="text" id="id" placeholder="ID" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="lead">lead</label>
+                    <input type="text" id="lead" placeholder="lead" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="opportunity">opportunity</label>
+                    <input type="text" id="opportunity" placeholder="opportunity" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="proposal">proposal</label>
+                    <input type="text" id="proposal" placeholder="proposal" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="quotation">quotation</label>
+                    <input type="text" id="quotation" placeholder="quotation" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="ra">ra</label>
+                    <input type="text" id="ra" placeholder="ra" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="design">design</label>
+                    <input type="text" id="design" placeholder="design" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="testing">testing</label>
+                    <input type="text" id="testing" placeholder="testing" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="development">development</label>
+                    <input type="text" id="development" placeholder="development" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="support">support</label>
+                    <input type="text" id="support" placeholder="support" class="form-control"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="maintenance">maintenance</label>
+                    <input type="text" id="maintenance" placeholder="maintenance" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="invoice">invoice</label>
+                    <input type="text" id="invoice" placeholder="invoice" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="delivery">delivery</label>
+                    <input type="text" id="delivery" placeholder="delivery" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="cancelled">cancelled</label>
+                    <input type="text" id="cancelled" placeholder="cancelled" class="form-control"/>
+                </div>
+
+                
+				<div class="form-group">
+                    <label for="delay">delay</label>
+                    <input type="text" id="delay" placeholder="delay" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="completed">completed</label>
+                    <input type="text" id="completed" placeholder="completed" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="user_id">user_id</label>
+                    <input type="text" id="user_id5" placeholder="user_id" class="form-control"/>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="addRecordQuotation()">Add Record</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // Modal -->
+
+<!-- Modal - Update User details -->
+<div class="modal fade" id="update_quotation_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Update</h4>
+            </div>
+            <div class="modal-body">
+
+                     
+				
+				<div class="form-group">
+                    <label for="lead">lead</label>
+                    <input type="text" id="update_lead" placeholder="lead" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="opportunity">opportunity</label>
+                    <input type="text" id="update_opportunity" placeholder="opportunity" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="proposal">proposal</label>
+                    <input type="text" id="update_proposal" placeholder="proposal" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="quotation">quotation</label>
+                    <input type="text" id="update_quotation" placeholder="quotation" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="ra">ra</label>
+                    <input type="text" id="update_ra" placeholder="ra" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="design">design</label>
+                    <input type="text" id="update_design" placeholder="design" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="testing">testing</label>
+                    <input type="text" id="update_testing" placeholder="testing" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="development">development</label>
+                    <input type="text" id="update_development" placeholder="development" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="support">support</label>
+                    <input type="text" id="update_support" placeholder="support" class="form-control"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="maintenance">maintenance</label>
+                    <input type="text" id="update_maintenance" placeholder="maintenance" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="invoice">invoice</label>
+                    <input type="text" id="update_invoice" placeholder="invoice" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="delivery">delivery</label>
+                    <input type="text" id="update_delivery" placeholder="delivery" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="cancelled">cancelled</label>
+                    <input type="text" id="update_cancelled" placeholder="cancelled" class="form-control"/>
+                </div>
+
+                
+				<div class="form-group">
+                    <label for="delay">delay</label>
+                    <input type="text" id="update_delay" placeholder="delay" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="completed">completed</label>
+                    <input type="text" id="update_completed" placeholder="completed" class="form-control"/>
+                </div>
+				<div class="form-group">
+                    <label for="user_id">user_id</label>
+                    <input type="text" id="update_user_id5" placeholder="user_id" class="form-control"/>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="UpdateQuotationDetails()" >Save Changes</button>
+                <input type="hidden" id="hidden_quotation_id">
             </div>
         </div>
     </div>
