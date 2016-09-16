@@ -17,7 +17,7 @@
         $project_status = $_POST['project_status'];
 		$category_proserv_project = $_POST['category_proserv_project'];
 
-		$query = "INSERT INTO proserv_project(id,proserv_id,project_contractor_id,category_proserv_project) VALUES('$id', '$proserv_id', '$project_contractor_id',  '$category_proserv_project')";
+		$query = "INSERT INTO proserv_project(id,proserv_id,project_contractor_id,project_price,project_team,project_status,category_proserv_project) VALUES('$id', '$proserv_id', '$project_contractor_id', '$project_price', '$project_team', '$project_status', '$category_proserv_project')";
 		if (!$result = mysql_query($query)) {
 	        exit(mysql_error());
 	    }

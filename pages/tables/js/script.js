@@ -766,12 +766,12 @@ $(document).ready(function () {
 function addRecordProserv_Project() {
     // get values
 	var id = $("#id").val();
-    var proserv_id = $("#proserv_id").val();
-    var project_contractor_id = $("#project_contractor_id").val();
+    var proserv_id = $("#proserv_id1").val();
+    var project_contractor_id = $("#project_contractor_id1").val();
     var project_price = $("#project_price1").val();
 	var project_team = $("#project_team1").val();
 	var project_status = $("#project_status1").val();
-	var category_proserv_project = $("#category_proserv_project").val();
+	var category_proserv_project = $("#category_proserv_project1").val();
 	
 
     // Add record
@@ -793,12 +793,12 @@ function addRecordProserv_Project() {
 
         // clear fields from the popup
         $("#id").val("");
-        $("#proserv_id").val("");
-        $("#project_contractor_id").val("");
+        $("#proserv_id1").val("");
+        $("#project_contractor_id1").val("");
         $("#project_price1").val("");
         $("#project_team1").val("");
         $("#project_status1").val("");
-		$("#category_proserv_project").val("");
+		$("#category_proserv_project1").val("");
 
     });
 }
@@ -1131,10 +1131,10 @@ function addRecordTeam_Members() {
 
     }, function (data, status) {
         // close the popup
-        $("#add_new_record_modal").modal("hide");
+        $("#add_new_record_modal7").modal("hide");
 
         // read records again
-        readRecords();
+        readRecordsTeam_Members();
 
         // clear fields from the popup
         $("#team_m_id").val("");
@@ -1151,12 +1151,12 @@ function addRecordTeam_Members() {
 // READ records
 function readRecordsTeam_Members() {
     $.get("ajax/readRecordsTeam_Members.php", {}, function (data, status) {
-        $(".records_content9").html(data);
+        $(".records_content7").html(data);
     });
 }
 
 
-function DeleteTeam_Members(id) {
+function DeleteTeam_Members(team_m_id) {
     var conf = confirm("Are you sure, do you really want to delete Team Members?");
     if (conf == true) {
         $.post("ajax/deleteTeam_Members.php", {
@@ -1170,9 +1170,9 @@ function DeleteTeam_Members(id) {
     }
 }
 
-function GetTeam_MembersDetails(id) {
+function GetTeam_MembersDetails(team_m_id) {
     // Add User ID to the hidden field for furture usage
-    $("#hidden_team_m_id").val(id);
+    $("#hidden_team_members_id").val(team_m_id);
     $.post("ajax/readTeam_MembersDetails.php", {
             team_m_id: team_m_id
         },
@@ -1191,12 +1191,15 @@ function GetTeam_MembersDetails(id) {
         }
     );
     // Open modal popup
-    $("#update_user_modal").modal("show");
+    $("#update_team_members_modal").modal("show");
 }
+
+
 
 function UpdateTeam_MembersDetails() {
     // get values
-    var team_m_id = $("#update_team_m_id").val();
+    
+
     var team_m_first_name = $("#update_team_m_first_name").val();
     var team_m_last_name = $("#update_team_m_last_name").val();
     var team_m_position = $("#update_team_m_position").val();
@@ -1205,7 +1208,7 @@ function UpdateTeam_MembersDetails() {
     
 
     // get hidden field value
-    var id = $("#hidden_team_members_id").val();
+    var team_m_id = $("#hidden_team_members_id").val();
 
     // Update the details by requesting to the server using ajax
     $.post("ajax/updateTeam_MembersDetails.php", {
@@ -1218,7 +1221,7 @@ function UpdateTeam_MembersDetails() {
         },
         function (data, status) {
             // hide modal popup
-            $("#update_user_modal").modal("hide");
+            $("#update_team_members_modal").modal("hide");
             // reload contact by using readRecords();
             readRecordsTeam_Members();
         }
