@@ -1,6 +1,6 @@
 <?php
 // include Database connection file 
-		include("db_connection.php");
+		
 
 	if(isset($_POST))
 	{
@@ -19,6 +19,6 @@
 		if (!$result = mysql_query($query)) {
 	        exit(mysql_error());
 	    }
-	    
+	    echo "1 Record Added!";
 	}
 ?>

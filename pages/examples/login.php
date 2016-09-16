@@ -21,7 +21,7 @@ if($username && $password)
 	if($dbusername == $username && $dbpassword == $password && $dbtype == "admin")
 	{
 		
-		header("Location: ../../indeex.html");
+		header("Location: ../../index.html");
 	}
 	elseif($dbusername == $username && $dbpassword == $password && $dbtype == "sales")
 	{
@@ -33,7 +33,7 @@ if($username && $password)
 	}
 	elseif($dbusername == $username && $dbpassword == $password && $dbtype == "company")
 	{
-		header("Location: ../../company_indeex.html");
+		header("Location: ../../company_index.html");
 	}
 	else
 	{
